@@ -1,0 +1,10 @@
+img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+input[type="file"]{
+    width: 100px;
+}
