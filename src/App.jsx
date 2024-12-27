@@ -106,34 +106,41 @@ function App() {
   return (
     <>
       <Container>
-        <div className="d-flex justify-content-between">
-        <img src={imgSrc} alt="" />
+        <div className="row justify-content-between align-items-center">
+          <div className="col-md-2 align-items-center d-flex">
+          <img src={imgSrc} alt="" />
         <label htmlFor="firstName">
-            Profile Picture:
+            Picture:
             <input
               type="file"
               accept="image/*"
               onChange={handleFileChange}
             />
           </label>
+          </div>
+          <div className="col-md-2">
           <label htmlFor="firstName">
             First name:
             <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder='Enter Firstname' />
           </label>
+          </div>
+          <div className="col-md-2">
           <label htmlFor="firstName">
             Last name:
             <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder='Enter lastname' />
           </label>
+          </div>
+          <div className="col-md-2">
           <label htmlFor="firstName">
             Age:
             <input type="text" value={age} onChange={(e) => setAge(e.target.value)} placeholder='Enter Age' />
           </label>
-          <div>
-            <td>
+          </div>
+          <div className='col-md-2'>
               {
-                isUpdate === false ? <button className="btn btn-primary" onClick={(e) => { handleSave(e) }} >Save</button> : <button className="btn btn-primary" onClick={() => { handleUpdate() }} >Update</button>
+                isUpdate === false ? <button className="btn btn-primary mt-4" onClick={(e) => { handleSave(e) }} >Save</button> : <button className="btn btn-primary  mt-4" onClick={() => { handleUpdate() }} >Update</button>
               }
-              <button className="btn btn-danger" onClick={() => { handleClear() }} >Clear</button></td>
+              <button className="btn btn-danger mt-4" onClick={() => { handleClear() }} >Clear</button>
 
           </div>
         </div>
